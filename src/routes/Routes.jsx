@@ -13,6 +13,8 @@ import AddNewSpot from "../pages/AddNewSpot/AddNewSpot";
 import Profile from "../pages/Profile/Profile";
 import UpdateSpot from "../pages/UpdateSpot/UpdateSpot";
 
+const BASE_URL = "http://localhost:3000/spot";
+
 const routes = createBrowserRouter([
     {
         path: "/",
@@ -22,7 +24,7 @@ const routes = createBrowserRouter([
                 path: "/",
                 element: <Home />,
                 loader: async () => {
-                    const cardResponse = await fetch('http://localhost:3000/spot');
+                    const cardResponse = await fetch(`${BASE_URL}`);
                     const blogResponse = await fetch('/Blog.json');
                     
                     const cardData = await cardResponse.json();
@@ -35,9 +37,13 @@ const routes = createBrowserRouter([
                 path: "/ViewDetails/:id",
                 element: <PrivateRoute><ViewDetails /></PrivateRoute>,
                 loader: async ({ params }) => {
-                    const response = await fetch(`http://localhost:3000/spot/${params.id}`);
-                    const data = await response.json();
-                    return data;
+                    const [cardResponse, allCardsResponse] = await Promise.all([
+                        fetch(`${BASE_URL}/${params.id}`),
+                        fetch(`${BASE_URL}`)
+                    ]);
+                    const card = await cardResponse.json();
+                    const allCards = await allCardsResponse.json();
+                    return { card, allCards };
                 }
             },
             {
@@ -48,7 +54,7 @@ const routes = createBrowserRouter([
                 path: "/viewAllCards",
                 element: <PrivateRoute><ViewAllCards /></PrivateRoute>,
                 loader: async () => {
-                    const response = await fetch('http://localhost:3000/spot');
+                    const response = await fetch(`${BASE_URL}`);
                     const data = await response.json();
                     return data;
                 }
@@ -79,18 +85,17 @@ const routes = createBrowserRouter([
             {
                 path: "/profile/dataUpdate/:id",
                 element: <PrivateRoute><UpdateSpot /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:3000/spot/${params.id}`),
+                loader: ({ params }) => fetch(`${BASE_URL}/${params.id}`).then(res => res.json()),
             },
             {
                 path: "/profile",
                 element: <PrivateRoute><Profile /></PrivateRoute>,
                 loader: async () => {
-                    const response = await fetch('http://localhost:3000/spot');
+                    const response = await fetch(`${BASE_URL}`);
                     const data = await response.json();
                     return data;
                 }
             },
-
         ]
     }
 ]);
