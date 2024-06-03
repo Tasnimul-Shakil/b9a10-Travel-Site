@@ -47,7 +47,7 @@ const UpdateSpot = () => {
       cardPhoto,
     };
     // send data to server
-    fetch(`https://b9a10-travel-site-server.vercel.app/spot/${card._id}`, {
+    fetch(`http://localhost:3000/spot/${card._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

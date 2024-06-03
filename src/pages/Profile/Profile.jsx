@@ -19,7 +19,7 @@ const Profile = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://b9a10-travel-site-server.vercel.app/spot/${id}`, {
+        fetch(`http://localhost:3000/spot/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

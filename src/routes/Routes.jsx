@@ -13,7 +13,7 @@ import AddNewSpot from "../pages/AddNewSpot/AddNewSpot";
 import Profile from "../pages/Profile/Profile";
 import UpdateSpot from "../pages/UpdateSpot/UpdateSpot";
 
-const BASE_URL = "https://b9a10-travel-site-server.vercel.app/spot";
+const BASE_URL = "http://localhost:3000/spot";
 
 const routes = createBrowserRouter([
   {
