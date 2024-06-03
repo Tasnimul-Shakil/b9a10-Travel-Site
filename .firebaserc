@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "staging": "b9a10-tourism-website",
+    "default": "b9a10-tourism-website"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
