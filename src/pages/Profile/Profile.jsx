@@ -2,12 +2,20 @@ import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import Swal from "sweetalert2";
 import { MdArrowOutward } from "react-icons/md";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Profile = () => {
   const cards = useLoaderData();
+  const { user } = useContext(AuthContext);
+  const userEmail = user?.email || "";
+
+  // Filter cards based on the logged-in user's email
+  const userCards = cards.filter(card => card.user_email === userEmail);
+
+  console.log(userEmail);
 
   const handleDelete = (id) => {
-    // Here, you would typically call an API to delete the item
     console.log("Deleting item with id:", id);
     Swal.fire({
       title: "Are you sure?",
@@ -19,12 +27,12 @@ const Profile = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/spot/${id}`, {
+        fetch(`http://localhost:3000/profile/${userEmail}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({}),
+          body: JSON.stringify({ id }),
         })
           .then((res) => res.json())
           .then((data) => {
@@ -41,6 +49,7 @@ const Profile = () => {
       }
     });
   };
+
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -68,7 +77,6 @@ const Profile = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="table">
-            {/* head */}
             <thead>
               <tr>
                 <th>Number</th>
@@ -79,24 +87,18 @@ const Profile = () => {
               </tr>
             </thead>
             <tbody>
-              {cards.map((cards, index) => (
-                <tr
-                  key={cards.id}
-                  className={index % 2 === 0 ? "bg-base-200" : ""}
-                >
+              {userCards.map((card, index) => (
+                <tr key={card.id} className={index % 2 === 0 ? "bg-base-200" : ""}>
                   <th>{index + 1}</th>
-                  <td>{cards.tourist_spot_name}</td>
-                  <td>{cards.country_name}</td>
+                  <td>{card.tourist_spot_name}</td>
+                  <td>{card.country_name}</td>
                   <td>
-                    <Link to={`dataUpdate/${cards._id}`}>
+                    <Link to={`dataUpdate/${card._id}`}>
                       <button className="btn btn-accent">Edit</button>
                     </Link>
                   </td>
                   <td>
-                    <button
-                      className="btn btn-error"
-                      onClick={() => handleDelete(cards._id)}
-                    >
+                    <button className="btn btn-error" onClick={() => handleDelete(card._id)}>
                       Delete
                     </button>
                   </td>

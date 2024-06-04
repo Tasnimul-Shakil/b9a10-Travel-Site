@@ -14,6 +14,7 @@ import Blogs from "./Blogs";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import Countries from "../Shared/Countries/Countries";
 // import 'swiper/css/navigation';
 
 const Home = () => {
@@ -24,22 +25,35 @@ const Home = () => {
   console.log(blogData);
 
   const [dataLength] = useState(6);
+
+  const uniqueCountries = [];
+  const uniqueCountryNames = new Set();
+
+  cardData.forEach(card => {
+    if (!uniqueCountryNames.has(card.country_name)) {
+      uniqueCountryNames.add(card.country_name);
+      uniqueCountries.push(card);
+    }
+  });
   return (
     <div className="container mx-auto">
       <Helmet>
         <title>TourPlanner | Home</title>
       </Helmet>
       <Navbar />
-      {/* {
-                cardData.slice(0,dataLength).map(aCards => <Header
-                    key={aCards.id}
-                    card={aCards}
-                    ></Header>)
-            } */}
-      {/* <Header/> */}
       <Header cards={cardData} />
-
-      <CompanyInfo />
+      <div className="mx-auto space-y-3 text-center px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <h1 className=" animate__animated animate__bounce text-3xl font-bold ">
+          Based on your location
+        </h1>
+        <p className="">Some of our picked properties near you location.</p>
+      <div className="pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+        {uniqueCountries.slice(0, dataLength).map(aCards => (
+          <Countries key={aCards.id} card={aCards} />
+        ))}
+      </div>
+      </div>
+      <CompanyInfo/>
       <div className="mx-auto space-y-3 text-center px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <h1 className=" animate__animated animate__bounce text-3xl font-bold ">
           Based on your location

@@ -16,7 +16,7 @@ const AddNewSpot = () => {
     const user_name = form.user_name.value;
     const user_email = form.user_email.value;
     const location = form.location.value;
-    // const theStory = form.theStory.value;
+    const countryPhoto = form.countryPhoto.value;
     const category = form.category.value;
     const average_cost = form.average_cost.value;
     const seasonality = form.seasonality.value;
@@ -27,12 +27,14 @@ const AddNewSpot = () => {
     const photo1 = form.photo1.value;
     const photo2 = form.photo2.value;
     const photo3 = form.photo3.value;
+    const photo4 = form.photo4.value;
 
     const newSpot = {
       tourist_spot_name,
       country_name,
       user_name,
       user_email,
+      countryPhoto,
       location,
       category,
       average_cost,
@@ -43,6 +45,7 @@ const AddNewSpot = () => {
       photo1,
       photo2,
       photo3,
+      photo4,
       cardPhoto,
     };
     console.log("all info:", newSpot);
@@ -139,12 +142,12 @@ const AddNewSpot = () => {
             </div>
             <div>
               <label className="block text-sm font-semibold leading-6 text-gray-900">
-                Country Name
+                Tour Time
               </label>
               <div className="mt-2.5">
                 <input
                   type="text"
-                  name="country_name"
+                  name="category"
                   placeholder="Enter Country Name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -152,18 +155,21 @@ const AddNewSpot = () => {
             </div>
             <div>
               <label className="block text-sm font-semibold leading-6 text-gray-900">
-                Time Category
+                Location Category
               </label>
               <div className="mt-2.5">
                 <select
-                  name="category"
+                  name="country_name"
                   defaultValue="Select A Category"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 >
                   <option disabled>Select A Category</option>
-                  <option value="3 day">3 days</option>
-                  <option value="7 Days">7 Days</option>
-                  <option value="15 Days">15 Days</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Cambodia">Cambodia</option>
                 </select>
               </div>
             </div>
@@ -253,6 +259,22 @@ const AddNewSpot = () => {
                 htmlFor="company"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
+                Country Photo
+              </label>
+              <div className="mt-2.5">
+                <input
+                  type="text"
+                  name="countryPhoto"
+                  placeholder="Enter photo URL"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="company"
+                className="block text-sm font-semibold leading-6 text-gray-900"
+              >
                 Card Photo
               </label>
               <div className="mt-2.5">
@@ -307,6 +329,22 @@ const AddNewSpot = () => {
                 <input
                   type="text"
                   name="photo3"
+                  placeholder="Enter photo URL"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="company"
+                className="block text-sm font-semibold leading-6 text-gray-900"
+              >
+                photo4
+              </label>
+              <div className="mt-2.5">
+                <input
+                  type="text"
+                  name="photo4"
                   placeholder="Enter photo URL"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />

@@ -33,7 +33,9 @@ const Card = ({ card }) => {
           <div className="flex justify-between items-end">
             <div>
               <h1 className="card-title">{tourist_spot_name}</h1>
-              <h2>{country_name}</h2>
+              <Link to={`/countryCards/${country_name}`} className=" text-[#9d9d9d] hover:text-[#51a6bb]">
+                <h2>{country_name}</h2>
+              </Link>
             </div>
             <h2 className=" text-xl font-semibold text-[#55D4AB]">
               {average_cost}

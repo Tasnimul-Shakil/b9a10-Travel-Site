@@ -53,7 +53,11 @@ const ViewDetails = () => {
                 </h3>
                 <p className=" text-base flex leading-7 text-gray-600">
                   <MdModeOfTravel className="text-2xl" />
-                  {card.country_name}, {card.location}
+                  <span> 
+                  <Link to={`/countryCards/${card.country_name}`} className=" text-[#9d9d9d] hover:text-[#51a6bb]">
+                    <h2>{card.country_name}</h2>
+                  </Link>
+                  </span> , {card.location}
                 </p>
               </div>
               <div className="">
@@ -101,7 +105,7 @@ const ViewDetails = () => {
                 <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-lg">
                   <img
                     className="transition duration-300 ease-in-out hover:scale-105 rounded-lg"
-                    src={card.coverPhoto}
+                    src={card.photo4}
                     alt=""
                   />
                 </div>

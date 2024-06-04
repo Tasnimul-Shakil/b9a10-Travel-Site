@@ -12,6 +12,7 @@ import AllBlogs from "../pages/AllBlogs/AllBlogs";
 import AddNewSpot from "../pages/AddNewSpot/AddNewSpot";
 import Profile from "../pages/Profile/Profile";
 import UpdateSpot from "../pages/UpdateSpot/UpdateSpot";
+import CountryCards from "../pages/ViewAllCards/CountryCards";
 
 const BASE_URL = "http://localhost:3000/spot";
 
@@ -103,6 +104,16 @@ const routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`${BASE_URL}/${params.id}`).then((res) => res.json()),
+      },
+      {
+        path: "/countryCards/:country_name",
+        element: <CountryCards />,
+        loader: async ({ params }) => {
+          const { country_name } = params;
+          const response = await fetch(`${BASE_URL}`);
+          const data = await response.json();
+          return { data, country_name };
+        },
       },
       {
         path: "/profile",
