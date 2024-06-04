@@ -88,7 +88,7 @@ const ViewDetails = () => {
               <div>
                 <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-lg">
                   <img
-                    className="transition duration-300 ease-in-out hover:scale-105 rounded-lg  w-full"
+                    className="transition w-full h-max duration-300 ease-in-out hover:scale-105 rounded-lg"
                     src={card.cardPhoto}
                     alt=""
                   />
@@ -97,29 +97,29 @@ const ViewDetails = () => {
               <div className="grid grid-cols-2 gap-2">
                 <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-lg">
                   <img
-                    className="transition duration-300 ease-in-out hover:scale-105 w-full rounded-lg"
+                    className="transition w-full h-full duration-300 ease-in-out hover:scale-105 rounded-lg"
                     src={card.photo1}
                     alt=""
                   />
                 </div>
-                <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-lg">
+                <div className="relative w-full overflow-hidden bg-cover bg-no-repeat rounded-lg">
                   <img
-                    className="transition duration-300 ease-in-out hover:scale-105 rounded-lg"
-                    src={card.photo4}
-                    alt=""
-                  />
-                </div>
-                <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-lg">
-                  <img
-                    className="transition duration-300 ease-in-out hover:scale-105 rounded-lg"
+                    className="transition w-full h-full duration-300 ease-in-out hover:scale-105 rounded-lg"
                     src={card.photo2}
                     alt=""
                   />
                 </div>
                 <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-lg">
                   <img
-                    className="transition duration-300 ease-in-out hover:scale-105 rounded-lg"
+                    className="transition w-full h-full duration-300 ease-in-out hover:scale-105 rounded-lg"
                     src={card.photo3}
+                    alt=""
+                  />
+                </div>
+                <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-lg">
+                  <img
+                    className="transition w-full h-full duration-300 ease-in-out hover:scale-105 rounded-lg"
+                    src={card.photo4}
                     alt=""
                   />
                 </div>
