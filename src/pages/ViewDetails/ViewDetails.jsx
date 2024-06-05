@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 import { Link, useLoaderData } from "react-router-dom";
-import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import travelTime from "../../assets/Group 10534.svg";
 import { MdModeOfTravel, MdAirplaneTicket } from "react-icons/md";
-import { RiWhatsappFill } from "react-icons/ri";
 import { FaPeopleLine } from "react-icons/fa6";
 import Footer from "../Shared/Footer/Footer";
 import { Helmet } from "react-helmet-async";
 import Card from "../Home/Card";
+
 
 const ViewDetails = () => {
   const { card, allCards } = useLoaderData();
@@ -32,7 +32,7 @@ const ViewDetails = () => {
             </li>
             <li>
               <Link to="/ViewAllCards">
-                <a>Our Property</a>
+                <a>Our Tourist Spots</a>
               </Link>
             </li>
             <li>
@@ -44,7 +44,31 @@ const ViewDetails = () => {
           className="hero min-h-96 rounded-2xl"
           style={{ backgroundImage: `url(${card.coverPhoto})` }}
         ></div>
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:flex gap-6 lg:max-w-none">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:flex lg:flex-row-reverse gap-6 lg:max-w-none">
+        <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+            <div className="mt-6 lg:ml-4 rounded-2xl  border text-center lg:justify-center sticky top-0  lg:py-4">
+              <div className="mx-auto p-4 space-y-4">
+                <p className="text-base font-semibold text-gray-600">
+                  Travel information added by 
+                </p>
+                <div className="flex gap-4">
+                  <div className="avatar">
+                    <div className="w-16 rounded-full">
+                      <img src={card.userPhoto} />
+                    </div>
+                  </div>
+                  <div className=" text-left">
+                    <h1 className="text-base font-semibold text-gray-600">
+                      {card.user_name}
+                    </h1>
+                    <p className="text-base text-gray-600">
+                      {card.user_profession}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="py-8 lg:px-1 px-4 lg:flex-auto">
             <div className=" flex justify-between">
               <div>
@@ -123,21 +147,6 @@ const ViewDetails = () => {
                     alt=""
                   />
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-            <div className="mt-6 lg:ml-4 rounded-2xl border text-center lg:justify-center sticky top-0  lg:py-4">
-              <div className="mx-auto p-4 space-y-4">
-                <p className="text-base font-semibold text-gray-600">
-                  Request a tour as early as
-                </p>
-                <button className="btn w-full bg-[#e7c873] hover:border-[#e7c873] hover:border-2 hover:bg-[#e7c87300]">
-                  Schedule a Tour <IoMdArrowRoundForward />
-                </button>
-                <button className="btn w-full bg-[#2a974b] text-white hover:border-[#2a974b] hover:text-gray-600 hover:border-2 hover:bg-[#2a974b00]">
-                  Chat via Whatsapp <RiWhatsappFill />
-                </button>
               </div>
             </div>
           </div>

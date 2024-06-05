@@ -17,7 +17,7 @@ const ViewAllCards = () => {
     return (
         <div className='container mx-auto'>
             <Helmet>
-                <title>Estatery | Our Property </title>
+                <title>TourPlaner | Tourist Spots </title>
             </Helmet>
             <Navbar/>
             <div className="mx-auto space-y-3 px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8 " >
@@ -26,11 +26,11 @@ const ViewAllCards = () => {
                         <li>
                             <Link to="/" onClick={scrollToTop}><a className='flex items-center'><IoMdArrowRoundBack /> Home</a></Link>
                         </li> 
-                        <li>Our Property</li> 
+                        <li>Our Tourist Spots</li> 
                     </ul>
                 </div>
-                <h1 className=' animate__animated animate__bounce text-3xl font-bold '>Based on your location</h1>
-                <p className=''>Some of our picked properties near you location.</p>
+                <h1 className=' animate__animated animate__bounce text-3xl font-bold '>Choose Your bast Tour Plane</h1>
+                <p className=''>Some of our picked Spots near you location.</p>
                 <div className=' pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8'>
                     {
                         cards.map(aCards => <Card

@@ -10,10 +10,10 @@ const Profile = () => {
   const { user } = useContext(AuthContext);
   const userEmail = user?.email || "";
 
-  // Filter cards based on the logged-in user's email
-  const userCards = cards.filter(card => card.user_email === userEmail);
+ 
+  const userCards = cards.filter((card) => card.user_email === userEmail);
 
-  console.log(userEmail);
+  
 
   const handleDelete = (id) => {
     console.log("Deleting item with id:", id);
@@ -61,21 +61,40 @@ const Profile = () => {
                 <span className="flex items-center">Home</span>
               </Link>
             </li>
-            <li>About Us</li>
+            <li>My Profile</li>
           </ul>
         </div>
-        <div className="flex justify-between">
-          <h1 className="lg:text-4xl text-3xl font-head text-[#080808] font-bold">
-            DataList
+        <div
+          className="hero min-h-80 rounded-2xl"
+          style={{
+            backgroundImage: `url(https://i.ibb.co/yymPkWX/Frame-14093.png)`,
+          }}
+        ></div>
+        <div className="flex gap-4 lg:px-12 px-4 pt-6 pb-10">
+          <div className="avatar online">
+            <div className="lg:w-24 w-16 rounded-full">
+              <img src={user.photoURL} />
+            </div>
+          </div>
+          <div>
+            <h1 className=" lg:text-2xl font-bold font-mono">
+              {user.displayName}
+            </h1>
+            <p className=" lg:text-xl text-xs">{user.email}</p>
+          </div>
+        </div>
+        <div className="flex justify-between lg:px-10 px-4">
+          <h1 className="lg:text-3xl text-xl font-head text-[#080808] font-bold">
+            My Tour list: {userCards.length}
           </h1>
           <Link to="/addNewSpot">
-            <button className="btn text-xl border-none text-white hover:text-[#080808] bg-[#080808] hover:bg-[#FFB646] group">
+            <button className="flex px-4 py-2 rounded-lg font-semibold lg:text-xl text-xs border-none text-white hover:text-[#080808] bg-[#080808] hover:bg-[#55D4AB] group">
               Add New Data
-              <MdArrowOutward className=" text-2xl transition-transform duration-500 ease-in-out transform group-hover:rotate-45" />
+              <MdArrowOutward className=" lg:text-2xl text-xs transition-transform duration-500 ease-in-out transform group-hover:rotate-45" />
             </button>
           </Link>
         </div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto lg:px-10 px-4">
           <table className="table">
             <thead>
               <tr>
@@ -88,7 +107,10 @@ const Profile = () => {
             </thead>
             <tbody>
               {userCards.map((card, index) => (
-                <tr key={card.id} className={index % 2 === 0 ? "bg-base-200" : ""}>
+                <tr
+                  key={card.id}
+                  className={index % 2 === 0 ? "bg-base-200" : ""}
+                >
                   <th>{index + 1}</th>
                   <td>{card.tourist_spot_name}</td>
                   <td>{card.country_name}</td>
@@ -98,7 +120,10 @@ const Profile = () => {
                     </Link>
                   </td>
                   <td>
-                    <button className="btn btn-error" onClick={() => handleDelete(card._id)}>
+                    <button
+                      className="btn btn-error"
+                      onClick={() => handleDelete(card._id)}
+                    >
                       Delete
                     </button>
                   </td>

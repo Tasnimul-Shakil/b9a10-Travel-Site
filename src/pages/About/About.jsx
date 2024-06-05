@@ -17,14 +17,14 @@ const About = () => {
     const teamMembers = useLoaderData();
     console.log(teamMembers, "Team members");
     const stats = [
-        { id: 1, name: 'Transactions every 24 hours', value: '44 million' },
-        { id: 2, name: 'Assets under holding', value: '$119 trillion' },
-        { id: 3, name: 'New users annually', value: '46,000' },
+        { id: 1, name: 'Trips Planned Every 24 Hours', value: '44 million' },
+        { id: 2, name: 'Countries Explored', value: '$119 trillion' },
+        { id: 3, name: 'Happy Travelers', value: '46,000' },
       ]
     return (
         <div className="container mx-auto">
             <Helmet>
-                <title>Estatery | About Us </title>
+                <title>TourPlaner | About Us </title>
             </Helmet>
            <Navbar/>
            <div className="text-sm breadcrumbs">
@@ -39,8 +39,8 @@ const About = () => {
             <div className="hero-overlay rounded-2xl bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="">
-                <h1 className="mb-5 text-4xl font-bold text-white"><Typewriter text="About Our Estatery" loop={true} speed={200} /></h1>
-                <p className="mb-5">Estatery redefines real estate with integrity, transparency, and personalized service, empowering clients through their property journey. Trusted partner in real estate.</p>
+                <h1 className="mb-5 text-4xl font-bold text-white"><Typewriter text="About TourPlaner"  /></h1>
+                <p className="mb-5">TourPlaner revolutionizes the travel experience with expertise, transparency, and personalized service, guiding travelers on unforgettable journeys. Your trusted partner in exploration and adventure.</p>
                 </div>
             </div>
             </div>
@@ -49,10 +49,10 @@ const About = () => {
                 <img src={galleryImage8} className="lg:max-w-2xl rounded-lg shadow-2xl" />
                 <div className="lg:px-2 px-4">
                 <h1 className="text-3xl font-bold">Our Mission</h1>
-                <p className="pt-6 ">At Estatery, our mission is to transform the real estate journey into an empowering and enriching experience for our clients. We are dedicated to redefining industry standards 
-                by prioritizing the individual needs and aspirations of each client we serve. Our goal is not just to facilitate property transactions but to build lasting relationships founded on trust, integrity, 
-                and personalized service. We strive to guide individuals and families through every step of their property journey, whether it is finding their dream home or making savvy investment decisions. 
-                With a relentless focus on innovation and excellence, we aim to surpass expectations, delivering unparalleled value and peace of mind to our clients.</p>
+                <p className="pt-6 ">At TourPlaner, our mission is to transform the travel experience into an empowering and enriching adventure for our clients. We are dedicated to redefining industry 
+                standards by prioritizing the unique preferences and aspirations of each traveler we serve. Our goal is not just to facilitate trips but to create lasting memories founded on trust, integrity,
+                 and personalized service. We strive to guide individuals, families, and groups through every step of their journey, whether it’s exploring new destinations or planning the perfect getaway.
+                  With a relentless focus on innovation and excellence, we aim to surpass expectations, delivering unparalleled value and peace of mind to our travelers.</p>
                 </div>
             </div>
             </div>
@@ -61,17 +61,18 @@ const About = () => {
                 <img src={galleryImage8} className="lg:max-w-2xl rounded-lg shadow-2xl" />
                 <div className="lg:px-2 px-4 lg:pt-0 pt-5">
                 <h1 className="text-3xl font-bold">Our Vision</h1>
-                <p className="pt-2 lg:pl-24">Integrity lies at the heart of everything we do at Estatery. It forms the cornerstone of our values, alongside professionalism, transparency, and a steadfast commitment to excellence. 
-                We conduct ourselves with honesty and integrity in all our interactions, ensuring that our clients can trust us implicitly. Our dedication to professionalism ensures that every client receives the highest quality service, 
-                tailored to their unique needs and preferences. Transparency is fundamental to our approach, as we believe in open communication and accountability throughout the entire real estate process. At Estatery, 
-                we are driven by a passion for innovation and continuous improvement, constantly seeking new ways to enhance the client experience and set new benchmarks for excellence in the industry.</p>
+                <p className="pt-2 lg:pl-24">Integrity lies at the heart of everything we do at TourPlaner. It forms the cornerstone of our values, alongside professionalism, transparency, 
+                and a steadfast commitment to excellence. We conduct ourselves with honesty and integrity in all our interactions, ensuring that our clients can trust us implicitly. 
+                Our dedication to professionalism ensures that every traveler receives the highest quality service, tailored to their unique needs and preferences. Transparency is fundamental to our approach, 
+                as we believe in open communication and accountability throughout the entire travel planning process. At TourPlaner, we are driven by a passion for innovation and continuous improvement, 
+                constantly seeking new ways to enhance the traveler experience and set new benchmarks for excellence in the industry.</p>
                 </div>
             </div>
             </div>
             <div className="py-14">
             <div className="mx-auto px-6 lg:px-8">
-                <h2 className="text-4xl font-bold text-center pb-4">Estatery Overview</h2>
-                <p className="text-center lg:px-24 text-sm">Estatery offers a comprehensive real estate platform, connecting buyers, sellers, investors, and professionals seamlessly.</p>
+                <h2 className="text-4xl font-bold text-center pb-4">TourPlaner Overview</h2>
+                <p className="text-center lg:px-24 text-sm">TourPlaner offers a comprehensive travel platform, connecting travelers, destinations, and travel professionals seamlessly.</p>
                 <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center pt-6 lg:grid-cols-3">
                 {stats.map((stat) => (
                     <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">

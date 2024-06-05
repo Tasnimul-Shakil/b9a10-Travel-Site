@@ -17,7 +17,7 @@ const AllBlogs = () => {
     return (
         <div className='container mx-auto'>
             <Helmet>
-                <title>Estatery | All Blog </title>
+                <title>TourPlaner | All Blog </title>
             </Helmet>
             <Navbar/>
             <div className="mx-auto space-y-3 px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8 " >
@@ -29,8 +29,9 @@ const AllBlogs = () => {
                         <li>All Blog</li> 
                     </ul>
                 </div>
-                <h1 className=' animate__animated animate__bounce text-3xl font-bold '>All Of Our Blog</h1>
-                <p className=''>Some of our picked properties near you location.</p>
+                <h1 className=' animate__animated animate__bounce text-3xl font-bold '>Discover the World</h1>
+                <p className=''>Join TourPlaner as we uncover hidden gems and share travel tips. From breathtaking landscapes to vibrant cultures, our blog is your gateway to unforgettable adventures. 
+                Start exploring today!</p>
                 <div className=' pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8'>
                     {
                         cards.map(aCards => <Blogs
