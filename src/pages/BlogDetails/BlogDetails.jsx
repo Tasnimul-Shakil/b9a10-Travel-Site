@@ -220,7 +220,7 @@ const BlogDetails = () => {
               <div className="mt-10">
                 <button
                   type=""
-                  className=" w-1/2 btn px-4 border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black"
+                  className=" w-1/2 btn px-4 border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black"
                 >
                   Lets talk
                 </button>

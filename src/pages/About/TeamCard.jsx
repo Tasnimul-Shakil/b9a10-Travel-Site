@@ -21,7 +21,7 @@ const TeamCard = ({ card }) => {
               <a
                 href={social_media.facebook}
                 target="_blank"
-                className="btn p-4 flex items-center border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black"
+                className="btn p-4 flex items-center border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black"
               >
                 <FaFacebook className="text-xl" />
               </a>
@@ -30,7 +30,7 @@ const TeamCard = ({ card }) => {
               <a
                 href={social_media.twitter}
                 target="_blank"
-                className="btn p-4 flex items-center border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black"
+                className="btn p-4 flex items-center border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black"
               >
                 <FaTwitter className="text-xl" />
               </a>
@@ -39,7 +39,7 @@ const TeamCard = ({ card }) => {
               <a
                 href={social_media.linkedin}
                 target="_blank"
-                className="btn p-4 flex items-center border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black"
+                className="btn p-4 flex items-center border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black"
               >
                 <FaLinkedin className="text-xl" />
               </a>

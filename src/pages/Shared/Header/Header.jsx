@@ -46,7 +46,7 @@ const Header = ({ cards }) => {
                       >
                         ...
                         <br />
-                        <button className="btn mt-10 px-4 border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black">
+                        <button className="btn mt-10 px-4 border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black">
                           See Our Products
                         </button>
                       </Link>

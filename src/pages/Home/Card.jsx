@@ -33,27 +33,30 @@ const Card = ({ card }) => {
           <div className="flex justify-between items-end">
             <div>
               <h1 className="card-title">{tourist_spot_name}</h1>
-              <Link to={`/countryCards/${country_name}`} className=" text-[#9d9d9d] hover:text-[#51a6bb]">
+              <Link
+                to={`/countryCards/${country_name}`}
+                className=" text-[#9d9d9d] hover:text-[#51a6bb]"
+              >
                 <h2>{country_name}</h2>
               </Link>
             </div>
-            <h2 className=" text-xl font-semibold text-[#55D4AB]">
+            <h2 className=" text-xl font-semibold text-[#f0ca4e]">
               {average_cost}
-              <span className="text-[#55D4AB]">$</span>
+              <span className="text-[#f0ca4e]">$</span>
             </h2>
           </div>
           <div className="flex justify-between gap-2 pt-4">
-            <div className="flex transition duration-300 text-[#8C8F98] hover:bg-[#55D4AB] hover:text-[#333333] ease-in-out hover:scale-110 border-2 hover:border-0 rounded-md items-center gap-1 p-1 hover-zoom">
+            <div className="flex transition duration-300 text-[#8C8F98] hover:bg-[#f0ca4e] hover:text-[#333333] ease-in-out hover:scale-110 border-2 hover:border-0 rounded-md items-center gap-1 p-1 hover-zoom">
               <span className=" font-normal hover:font-bold text-xs">
                 {location}
               </span>
             </div>
-            <div className="flex transition duration-300 text-[#8C8F98] hover:bg-[#55D4AB] hover:text-[#333333] ease-in-out hover:scale-110 border-2 hover:border-0 rounded-md items-center gap-1 p-1 hover-zoom">
+            <div className="flex transition duration-300 text-[#8C8F98] hover:bg-[#f0ca4e] hover:text-[#333333] ease-in-out hover:scale-110 border-2 hover:border-0 rounded-md items-center gap-1 p-1 hover-zoom">
               <span className="font-normal hover:font-bold  text-xs">
                 {seasonality}
               </span>
             </div>
-            <div className="flex transition duration-300 text-[#8C8F98] hover:bg-[#55D4AB] hover:text-[#333333] ease-in-out hover:scale-110 border-2 hover:border-0 rounded-md items-center gap-1 p-1 hover-zoom">
+            <div className="flex transition duration-300 text-[#8C8F98] hover:bg-[#f0ca4e] hover:text-[#333333] ease-in-out hover:scale-110 border-2 hover:border-0 rounded-md items-center gap-1 p-1 hover-zoom">
               <span className="font-normal hover:font-bold  text-xs">
                 {category}
               </span>
@@ -67,7 +70,7 @@ const Card = ({ card }) => {
                 <br />
                 <button
                   onClick={scrollToTop}
-                  className="btn my-4 px-2 border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#55D4AB] hover:text-black"
+                  className="btn my-4 px-2 border-0 font-semibold text-white bg-[#f0ca4e] hover:bg-[#55D4AB] hover:text-black"
                 >
                   view details
                 </button>

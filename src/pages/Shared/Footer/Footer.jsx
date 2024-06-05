@@ -15,7 +15,7 @@ const Footer = () => {
         <aside>
           <img className="w-10" onClick={scrollToTop} src={footerLogo} alt="" />
           <p className="font-semibold ">
-            Estatery Industries Ltd.
+            TourPlanner Industries Ltd.
             <br />
             Providing reliable tech since 1992
           </p>
@@ -26,7 +26,7 @@ const Footer = () => {
             <a className="link link-hover">Home</a>
           </Link>
           <Link to="/ViewAllCards" onClick={scrollToTop}>
-            <a className="link link-hover">Our Properties </a>
+            <a className="link link-hover">Tourist Spots</a>
           </Link>
           <Link to="/AllBlogs" onClick={scrollToTop}>
             <a className="link link-hover">All Blogs </a>
@@ -47,7 +47,7 @@ const Footer = () => {
                 placeholder="username@site.com"
                 className="input input-bordered join-item"
               />
-              <button className="btn text-white bg-[#7065F0] hover:bg-[#55D4AB] border-0 hover:text-black join-item">
+              <button className="btn text-white bg-[#55D4AB] hover:bg-[#f0ca4e] border-0 hover:text-black join-item">
                 Subscribe
               </button>
             </div>
@@ -59,21 +59,21 @@ const Footer = () => {
             <a
               href=""
               target="_blank"
-              className="p-1.5 rounded-md items-center border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black"
+              className="p-1.5 rounded-md items-center border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black"
             >
               <FaFacebook className="text-xl" />
             </a>
             <a
               href=""
               target="_blank"
-              className="p-1.5 rounded-md items-center border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black"
+              className="p-1.5 rounded-md items-center border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black"
             >
               <FaTwitter className="text-xl" />
             </a>
             <a
               href=""
               target="_blank"
-              className="p-1.5 rounded-md items-center border-0 font-semibold text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black"
+              className="p-1.5 rounded-md items-center border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black"
             >
               <FaLinkedin className="text-xl" />
             </a>

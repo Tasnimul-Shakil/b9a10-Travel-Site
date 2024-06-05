@@ -47,7 +47,7 @@ const Register = () => {
   //   createUser(email, password, image, name).then((result) => {
   //     updateUserProfile(image, name).then(() => {
   //       const user = {email};
-  //       fetch('http://localhost:3000/user',{
+  //       fetch('https://b9a10-travel-site-server.vercel.app/user',{
   //         method: "POST",
   //         headers: {
   //           "Content-Type": "application/json",
@@ -81,13 +81,16 @@ const Register = () => {
 
       // Post to server
       const user = { email, password, image, name };
-      const response = await fetch("http://localhost:3000/user", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const response = await fetch(
+        "https://b9a10-travel-site-server.vercel.app/user",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
 
       const data = await response.json();
       console.log(data);
@@ -211,7 +214,7 @@ const Register = () => {
               </div>
             </div>
             <div className="form-control mt-6">
-              <button className="btn border-0 text-xl text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black">
+              <button className="btn border-0 text-xl text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black">
                 Sign Up
               </button>
             </div>

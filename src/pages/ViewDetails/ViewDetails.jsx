@@ -9,7 +9,6 @@ import Footer from "../Shared/Footer/Footer";
 import { Helmet } from "react-helmet-async";
 import Card from "../Home/Card";
 
-
 const ViewDetails = () => {
   const { card, allCards } = useLoaderData();
   const [dataLength] = useState(3);
@@ -45,11 +44,11 @@ const ViewDetails = () => {
           style={{ backgroundImage: `url(${card.coverPhoto})` }}
         ></div>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex lg:flex-row-reverse gap-6 lg:max-w-none">
-        <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
             <div className="mt-6 lg:ml-4 rounded-2xl  border text-center lg:justify-center sticky top-0  lg:py-4">
               <div className="mx-auto p-4 space-y-4">
                 <p className="text-base font-semibold text-gray-600">
-                  Travel information added by 
+                  Travel information added by
                 </p>
                 <div className="flex gap-4">
                   <div className="avatar">
@@ -77,11 +76,15 @@ const ViewDetails = () => {
                 </h3>
                 <p className=" text-base flex leading-7 text-gray-600">
                   <MdModeOfTravel className="text-2xl" />
-                  <span> 
-                  <Link to={`/countryCards/${card.country_name}`} className=" text-[#9d9d9d] hover:text-[#51a6bb]">
-                    <h2>{card.country_name}</h2>
-                  </Link>
-                  </span> , {card.location}
+                  <span>
+                    <Link
+                      to={`/countryCards/${card.country_name}`}
+                      className=" text-[#9d9d9d] hover:text-[#51a6bb]"
+                    >
+                      <h2>{card.country_name}</h2>
+                    </Link>
+                  </span>{" "}
+                  , {card.location}
                 </p>
               </div>
               <div className="">
@@ -91,15 +94,15 @@ const ViewDetails = () => {
               </div>
             </div>
             <div className="grid lg:grid-cols-3 grid-cols-2 gap-3 pt-6">
-              <div className="flex lg:gap-3 gap-1 transition justify-center duration-300 text-[#353535] hover:bg-[#55D4AB] hover:text-[#333333] hover:font-bold ease-in-out hover:scale-110 border-2 hover:border-0 rounded-lg lg:p-6 p-2 lg:text-xl">
-                <img src={travelTime} alt=""/>
+              <div className="flex lg:gap-3 gap-1 transition justify-center duration-300 text-[#353535] hover:bg-[#f0ca4e] hover:text-[#333333] hover:font-bold ease-in-out hover:scale-110 border-2 hover:border-0 rounded-lg lg:p-6 p-2 lg:text-xl">
+                <img src={travelTime} alt="" />
                 <h2>{card.category} Travel</h2>
               </div>
-              <div className="flex gap-3 transition justify-center duration-300 text-[#353535] hover:bg-[#55D4AB] hover:text-[#333333] hover:font-bold ease-in-out hover:scale-110 border-2 hover:border-0 rounded-lg lg:p-6 p-2 lg:text-xl">
+              <div className="flex gap-3 transition justify-center duration-300 text-[#353535] hover:bg-[#f0ca4e] hover:text-[#333333] hover:font-bold ease-in-out hover:scale-110 border-2 hover:border-0 rounded-lg lg:p-6 p-2 lg:text-xl">
                 <MdAirplaneTicket className="text-2xl" />
                 <h2> {card.seasonality}</h2>
               </div>
-              <div className="flex gap-3 transition justify-center duration-300 text-[#353535] hover:bg-[#55D4AB] hover:text-[#333333] hover:font-bold ease-in-out hover:scale-110 border-2 hover:border-0 rounded-lg lg:p-6 p-2 lg:text-xl">
+              <div className="flex gap-3 transition justify-center duration-300 text-[#353535] hover:bg-[#f0ca4e] hover:text-[#333333] hover:font-bold ease-in-out hover:scale-110 border-2 hover:border-0 rounded-lg lg:p-6 p-2 lg:text-xl">
                 <FaPeopleLine className="text-2xl" />
                 <h2>{card.total_visitors_per_year}</h2>
               </div>

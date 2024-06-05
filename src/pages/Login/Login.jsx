@@ -71,7 +71,7 @@ const Login = () => {
             icon: "error",
             showCancelButton: true,
             confirmButtonColor: "#09B161",
-            cancelButtonColor: "#7065F0",
+            cancelButtonColor: "#55D4AB",
             confirmButtonText: "Try Again",
             cancelButtonText: "Go to Register Page",
           }).then((result) => {
@@ -173,7 +173,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn border-0 text-xl text-white bg-[#7065F0] hover:bg-[#55D4AB] hover:text-black">
+              <button className="btn border-0 text-xl text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black">
                 Login
               </button>
             </div>
