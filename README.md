@@ -1,8 +1,18 @@
-# React + Vite
+# TourPlaner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TourPlaner revolutionizes the travel experience with expertise, transparency, and personalized service, guiding travelers on unforgettable journeys. Your trusted partner in exploration and adventure.
 
-Currently, two official plugins are available:
+## The New Way to Plan Your Next Adventure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Discover your dream destination with over 10k+ travel experiences listed on TourPlaner.
+
+## Empowering Your Travel Journey
+
+At TourPlaner, we empower you to explore the world with confidence. Our comprehensive services and commitment to transparency put you in control, ensuring a seamless and rewarding travel experience.
+
+### Features
+
+- **Travel Insurance**: Ensure peace of mind with our comprehensive solutions, protecting your journey and securing your adventures.
+- **Best Price Guarantee**: Rest assured with TourPlaner's commitment to competitive prices and maximizing value for travelers.
+- **Lowest Commission Rates**: Save on costs with TourPlaner's transparent pricing, offering some of the industry’s lowest rates without sacrificing quality service.
+- **Overall Control**: Take charge of your journey with TourPlaner's platform, providing tools for informed decision-making and ultimate control over your travel endeavors.
