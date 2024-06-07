@@ -100,7 +100,7 @@ const UpdateSpot = () => {
             <li>My Profile</li>
           </ul>
         </div>
-        <div className="mx-auto bg-[#F4F3F0] mt-4 lg:p-16 p-4 rounded-2xl">
+        <div className="mx-auto bg-[#e7e7e7] mt-4 lg:p-16 p-4 rounded-2xl">
           <h1 className="g:text-3xl text-xl text-center font-bold text-gray-900">
             Update Your Tour Info
           </h1>
@@ -209,7 +209,7 @@ const UpdateSpot = () => {
                     defaultValue={card.description}
                     name="description"
                     placeholder="Enter Description Name"
-                    className="textarea textarea-bordered w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className=" textarea-bordered w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -411,8 +411,7 @@ const UpdateSpot = () => {
               <button
                 type="submit"
                 value="Add work"
-                className="block w-full rounded-md bg-[#D2B48C] px-3.5 py-2.5 text-center text-sm font-semibold text-[#331A15] hover:text-white shadow-sm hover:bg-[#9b6f35] 
-                            border-2 border-[#331A15] "
+                className="block w-full rounded-md  px-3.5 py-2.5 text-center text-sm font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black "
               >
                 Add work
               </button>

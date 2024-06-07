@@ -21,7 +21,7 @@ const Blogs = ({ card }) => {
   };
 
   return (
-    <article className="card border-3 border-[#155315] bg-base-100 shadow-xl border-2 rounded-xl">
+    <article className="card border-3 border-[#155315]  shadow-xl border-2 rounded-xl">
       <figure>
         <img src={card_image} alt="Shoes" />
       </figure>
@@ -37,7 +37,7 @@ const Blogs = ({ card }) => {
         </a>
       </div>
       <div className="group px-4  relative">
-        <h3 className="pt-3 text-lg font-semibold line-clamp-1 leading-6 text-gray-900 group-hover:text-gray-600">
+        <h3 className="pt-3 text-lg font-semibold line-clamp-1 leading-6  group-hover:text-gray-600">
           <Link to={`/blogDetails/${blog_id}`}>
             <h1 onClick={scrollToTop}>
               <span className="absolute inset-0 " />
@@ -56,7 +56,7 @@ const Blogs = ({ card }) => {
           className="h-10 w-10 rounded-full bg-gray-50"
         />
         <div className="text-sm leading-6">
-          <p className="font-semibold text-gray-900">
+          <p className="font-semibold ">
             <Link to={`/blogDetails/${blog_id}`}>
               <span onClick={scrollToTop} className="absolute inset-0" />
               {author_name}

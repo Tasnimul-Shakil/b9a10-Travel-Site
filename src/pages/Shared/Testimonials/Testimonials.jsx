@@ -43,7 +43,7 @@ const Testimonials = () => {
         className="mySwiper lg:w-[32rem] w-[18rem]"
       >
         <SwiperSlide className="">
-          <div className="card p-4 border-3 border-[#155315] bg-base-100 shadow-xl border-2 rounded-xl">
+          <div className="card p-4 border-3 border-[#155315] bg-[#d6f8ee] shadow-xl border-2 rounded-xl">
             <div className="flex gap-6">
               <img
                 className=" lg:w-16 h-16 rounded-full"
@@ -69,7 +69,7 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card p-4 border-3 border-[#155315] bg-base-100 shadow-xl border-2 rounded-xl">
+          <div className="card p-4 border-3 border-[#155315] bg-[#d6f8ee] shadow-xl border-2 rounded-xl">
             <div className="flex gap-6">
               <img
                 className=" w-16 h-16 rounded-full"
@@ -95,7 +95,7 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card p-4 border-3 border-[#155315] bg-base-100 shadow-xl border-2 rounded-xl">
+          <div className="card p-4 border-3 border-[#155315] bg-[#d6f8ee] shadow-xl border-2 rounded-xl">
             <div className="flex gap-6">
               <img
                 className=" w-16 h-16 rounded-full"
@@ -121,7 +121,7 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card p-4 border-3 border-[#155315] bg-base-100 shadow-xl border-2 rounded-xl">
+          <div className="card p-4 border-3 border-[#155315] bg-[#d6f8ee] shadow-xl border-2 rounded-xl">
             <div className="flex gap-6">
               <img
                 className=" w-16 h-16 rounded-full"
@@ -147,7 +147,7 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card p-4 border-3 border-[#155315] bg-base-100 shadow-xl border-2 rounded-xl">
+          <div className="card p-4 border-3 border-[#155315] bg-[#d6f8ee] shadow-xl border-2 rounded-xl">
             <div className="flex gap-6">
               <img
                 className=" w-16 h-16 rounded-full"
@@ -161,7 +161,7 @@ const Testimonials = () => {
             </div>
             <div className="card-body p-2">
               <p>
-                Exceptional tour! The guides' knowledge of the area and their
+                Exceptional tour! The guides knowledge of the area and their
                 enthusiasm made the trip unforgettable. The itinerary was
                 perfectly balanced between sightseeing and relaxation.
               </p>
@@ -173,7 +173,7 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card p-4 border-3 border-[#155315] bg-base-100 shadow-xl border-2 rounded-xl">
+          <div className="card p-4 border-3 border-[#155315] bg-[#d6f8ee] shadow-xl border-2 rounded-xl">
             <div className="flex gap-6">
               <img
                 className=" w-16 h-16 rounded-full"
@@ -189,7 +189,7 @@ const Testimonials = () => {
               <p>
                 Highly recommended! The team provided excellent service from
                 start to finish. Their expertise and attention to detail ensured
-                a smooth and enjoyable tour. I couldn't be happier with the
+                a smooth and enjoyable tour. I could not be happier with the
                 outcome.
               </p>
               <div className="card-actions pt-4 justify-between">

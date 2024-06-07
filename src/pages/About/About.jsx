@@ -1,7 +1,8 @@
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
-import galleryImage13 from "../../assets/Home_13.png";
-import galleryImage8 from "../../assets/Home_8.png";
+import galleryImage13 from "../../assets/about.png";
+import galleryImage8 from "../../assets/Mission.png";
+import galleryImage9 from "../../assets/Visioon.png";
 import { useLoaderData } from "react-router-dom";
 import TeamCard from "./TeamCard";
 import Typewriter from "react-ts-typewriter";
@@ -81,7 +82,7 @@ const About = () => {
       <div className=" min-h-56 lg:text-end py-14">
         <div className="lg:flex justify-between items-start px-0 flex-col lg:gap-6 lg:flex-row-reverse">
           <img
-            src={galleryImage8}
+            src={galleryImage9}
             className="lg:max-w-2xl rounded-lg shadow-2xl"
           />
           <div className="lg:px-2 px-4 lg:pt-0 pt-5">

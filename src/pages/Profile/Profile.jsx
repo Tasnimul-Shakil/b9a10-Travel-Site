@@ -1,7 +1,8 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import Swal from "sweetalert2";
-import { MdArrowOutward } from "react-icons/md";
+import { MdArrowOutward, MdDeleteForever   } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Footer from "../Shared/Footer/Footer";
@@ -109,7 +110,7 @@ const Profile = () => {
           <div className="overflow-x-auto lg:px-10 px-4">
             <table className="table">
               <thead>
-                <tr>
+                <tr className="font-bold text-xl text-[#55D4AB]">
                   <th>Number</th>
                   <th>Title</th>
                   <th>Project Link</th>
@@ -121,22 +122,22 @@ const Profile = () => {
                 {userCards.map((card, index) => (
                   <tr
                     key={card.id}
-                    className={index % 2 === 0 ? "bg-base-200" : ""}
+                    className={index % 2 === 0 ? "bg-[#dadada]" : ""}
                   >
                     <th>{index + 1}</th>
                     <td>{card.tourist_spot_name}</td>
                     <td>{card.country_name}</td>
                     <td>
                       <Link to={`dataUpdate/${card._id}`}>
-                        <button className="btn btn-accent">Edit</button>
+                        <button className="btn  text-xl btn-accent"><FaEdit /></button>
                       </Link>
                     </td>
                     <td>
                       <button
-                        className="btn btn-error"
+                        className="btn text-white text-xl btn-error"
                         onClick={() => handleDelete(card._id)}
                       >
-                        Delete
+                        <MdDeleteForever />
                       </button>
                     </td>
                   </tr>
