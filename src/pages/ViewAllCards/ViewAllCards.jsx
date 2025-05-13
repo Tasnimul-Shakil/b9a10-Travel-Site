@@ -17,7 +17,7 @@ const ViewAllCards = () => {
     return (
         <div className='container mx-auto'>
             <Helmet>
-                <title>TourPlaner | Tourist Spots </title>
+                <title>TravelCraft | Tourist Spots </title>
             </Helmet>
             <Navbar/>
             <div className="mx-auto space-y-3 px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8 " >

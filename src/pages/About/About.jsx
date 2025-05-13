@@ -2,13 +2,16 @@ import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 import galleryImage13 from "../../assets/about.png";
 import galleryImage8 from "../../assets/Mission.png";
-import galleryImage9 from "../../assets/Visioon.png";
+import galleryImage9 from "../../assets/Vision.png";
 import { useLoaderData } from "react-router-dom";
 import TeamCard from "./TeamCard";
 import Typewriter from "react-ts-typewriter";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import shareTrip from "../../assets/ShareTrips.svg"
+import airbnb from "../../assets/airbnb.svg"
+import Kayak from "../../assets/Kayak.svg"
 
 const About = () => {
   const teamMembers = useLoaderData();
@@ -21,7 +24,7 @@ const About = () => {
   return (
     <div className="container mx-auto">
       <Helmet>
-        <title>TourPlaner | About Us </title>
+        <title>TravelCraft | About Us </title>
       </Helmet>
       <Navbar />
       <div className="text-sm breadcrumbs">
@@ -44,10 +47,10 @@ const About = () => {
         <div className="hero-content text-center text-neutral-content">
           <div className="">
             <h1 className="mb-5 text-4xl font-bold text-white">
-              <Typewriter text="About TourPlaner" />
+              <Typewriter text="About TravelCraft" />
             </h1>
             <p className="mb-5">
-              TourPlaner revolutionizes the travel experience with expertise,
+              TravelCraft revolutionizes the travel experience with expertise,
               transparency, and personalized service, guiding travelers on
               unforgettable journeys. Your trusted partner in exploration and
               adventure.
@@ -64,7 +67,7 @@ const About = () => {
           <div className="lg:px-2 px-4">
             <h1 className="text-3xl font-bold">Our Mission</h1>
             <p className="pt-6 ">
-              At TourPlaner, our mission is to transform the travel experience
+              At TravelCraft, our mission is to transform the travel experience
               into an empowering and enriching adventure for our clients. We are
               dedicated to redefining industry standards by prioritizing the
               unique preferences and aspirations of each traveler we serve. Our
@@ -88,7 +91,7 @@ const About = () => {
           <div className="lg:px-2 px-4 lg:pt-0 pt-5">
             <h1 className="text-3xl font-bold">Our Vision</h1>
             <p className="pt-2 lg:pl-24">
-              Integrity lies at the heart of everything we do at TourPlaner. It
+              Integrity lies at the heart of everything we do at TravelCraft. It
               forms the cornerstone of our values, alongside professionalism,
               transparency, and a steadfast commitment to excellence. We conduct
               ourselves with honesty and integrity in all our interactions,
@@ -97,7 +100,7 @@ const About = () => {
               highest quality service, tailored to their unique needs and
               preferences. Transparency is fundamental to our approach, as we
               believe in open communication and accountability throughout the
-              entire travel planning process. At TourPlaner, we are driven by a
+              entire travel planning process. At TravelCraft, we are driven by a
               passion for innovation and continuous improvement, constantly
               seeking new ways to enhance the traveler experience and set new
               benchmarks for excellence in the industry.
@@ -108,10 +111,10 @@ const About = () => {
       <div className="py-14">
         <div className="mx-auto px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center pb-4">
-            TourPlaner Overview
+            TravelCraft Overview
           </h2>
           <p className="text-center lg:px-24 text-sm">
-            TourPlaner offers a comprehensive travel platform, connecting
+            TravelCraft offers a comprehensive travel platform, connecting
             travelers, destinations, and travel professionals seamlessly.
           </p>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center pt-6 lg:grid-cols-3">
@@ -149,35 +152,35 @@ const About = () => {
           <div className="mx-auto  grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
             <img
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
-              alt="Transistor"
+              src="https://www.worldtrips.com/hubfs/logos/WorldTrips%20Logos/worldtrips-travel-insurance-black.svg"
+              alt="World Trips"
               width={158}
               height={48}
             />
             <img
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+              src={shareTrip}
               alt="Reform"
               width={158}
               height={48}
             />
             <img
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+              src={airbnb}
               alt="Tuple"
               width={158}
               height={48}
             />
             <img
               className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+              src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
               alt="SavvyCal"
               width={158}
               height={48}
             />
             <img
               className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+              src={Kayak}
               alt="Statamic"
               width={158}
               height={48}

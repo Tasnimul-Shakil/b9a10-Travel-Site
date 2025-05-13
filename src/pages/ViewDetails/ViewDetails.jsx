@@ -16,7 +16,7 @@ const ViewDetails = () => {
   return (
     <div className="container mx-auto">
       <Helmet>
-        <title>TourPlanner | Details </title>
+        <title>TravelCraft | Details </title>
       </Helmet>
       <Navbar />
       <>

@@ -78,7 +78,7 @@ const Navbar = () => {
         </div>
         <a href="/" className="btn border-none bg-transparent  hover:bg-[#f0ca4e] text-xl text-[#55D4AB] hover:text-[#072F53]">
           <img src={mainLogo} alt="" />
-          TourPlanner
+          TravelCraft
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">

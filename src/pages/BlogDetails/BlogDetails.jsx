@@ -32,7 +32,7 @@ const BlogDetails = () => {
     <div className="container mx-auto">
       <Navbar />
       <Helmet>
-        <title>TourPlaner | Blog_Details </title>
+        <title>TravelCraft | Blog_Details </title>
       </Helmet>
       <div className="text-sm breadcrumbs">
         <ul>

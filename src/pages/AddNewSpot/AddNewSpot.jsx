@@ -272,6 +272,7 @@ const AddNewSpot = () => {
                     type="text"
                     disabled
                     defaultValue={userPhoto}
+                    name="userPhoto"
                     placeholder="Enter photo URL"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -283,10 +284,15 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Cover Photo
+                  <span className="text-xs text-gray-500">
+                    (URL Only)
+                  </span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
+                    required
                     name="coverPhoto"
                     placeholder="Enter photo URL"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -299,6 +305,10 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Country Photo
+                  <span className="text-xs text-gray-500">
+                    (URL Only)
+                  </span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -315,10 +325,15 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Card Photo
+                  <span className="text-xs text-gray-500">
+                    (URL Only)
+                  </span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
+                    required
                     name="cardPhoto"
                     placeholder="Enter photo URL"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -331,11 +346,16 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   photo1
+                  <span className="text-xs text-gray-500">
+                    (URL Only)
+                  </span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
                     name="photo1"
+                    required
                     placeholder="Enter photo URL"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -346,12 +366,17 @@ const AddNewSpot = () => {
                   htmlFor="company"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  photo2
+                  photo 2
+                  <span className="text-xs text-gray-500">
+                    (URL Only)
+                  </span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
                     name="photo2"
+                    required
                     placeholder="Enter photo URL"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -362,12 +387,17 @@ const AddNewSpot = () => {
                   htmlFor="company"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  photo3
+                  photo 3
+                  <span className="text-xs text-gray-500">
+                    (URL Only)
+                  </span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
                     name="photo3"
+                    required
                     placeholder="Enter photo URL"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -378,7 +408,11 @@ const AddNewSpot = () => {
                   htmlFor="company"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  photo4
+                  photo 4
+                  <span className="text-xs text-gray-500">
+                    (URL Only)
+                  </span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input

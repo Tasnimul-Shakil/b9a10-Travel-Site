@@ -15,7 +15,7 @@ const Footer = () => {
         <aside>
           <img className="w-10" onClick={scrollToTop} src={footerLogo} alt="" />
           <p className="font-semibold ">
-            TourPlanner Industries Ltd.
+          TravelCraft Industries Ltd.
             <br />
             Providing reliable tech since 1992
           </p>

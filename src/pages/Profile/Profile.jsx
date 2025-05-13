@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import Swal from "sweetalert2";
-import { MdArrowOutward, MdDeleteForever   } from "react-icons/md";
+import { MdArrowOutward, MdDeleteForever } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -99,12 +99,10 @@ const Profile = () => {
         </div>
         {userCards.length === 0 ? (
           <div className="flex flex-col items-center justify-center mt-10">
-            <img
-              src={nodata}
-              alt="No Data"
-              className=" w-64"
-            />
-            <p className="text-xl text-gray-600 mt-4">No tours available. Add some tours to see them here!</p>
+            <img src={nodata} alt="No Data" className=" w-64" />
+            <p className="text-xl text-gray-600 mt-4">
+              No tours available. Add some tours to see them here!
+            </p>
           </div>
         ) : (
           <div className="overflow-x-auto lg:px-10 px-4">
@@ -129,7 +127,9 @@ const Profile = () => {
                     <td>{card.country_name}</td>
                     <td>
                       <Link to={`dataUpdate/${card._id}`}>
-                        <button className="btn  text-xl btn-accent"><FaEdit /></button>
+                        <button className="btn  text-xl btn-accent">
+                          <FaEdit />
+                        </button>
                       </Link>
                     </td>
                     <td>

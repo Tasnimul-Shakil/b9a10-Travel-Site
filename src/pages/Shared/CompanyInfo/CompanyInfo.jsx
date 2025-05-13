@@ -24,7 +24,7 @@ const CompanyInfo = () => {
           </h1>
           <p>
             Discover your dream destination with over 10k+ travel experiences
-            listed on TourPlaner.
+            listed on TravelCraft.
           </p>
           <Link to={`/about`} onClick={scrollToTop}>
             <button className=" btn mt-10 px-4 border-0 font-semibold text-white bg-[#55D4AB] hover:bg-[#f0ca4e] hover:text-black">
@@ -38,7 +38,7 @@ const CompanyInfo = () => {
           Empowering Your Travel Journey
         </h3>
         <p className="pt-4 text-base leading-7 text-gray-600">
-          At TourPlaner, we empower you to explore the world with confidence.
+          At TravelCraft, we empower you to explore the world with confidence.
           Our comprehensive services and commitment to transparency put you in
           control, ensuring a seamless and rewarding travel experience.
         </p>
@@ -58,7 +58,7 @@ const CompanyInfo = () => {
             <div className="">
               <h2 className="card-title">Best Price Guarantee</h2>
               <p className="pr-4">
-                Rest assured with TourPlaner is commitment to competitive prices
+                Rest assured with TravelCraft is commitment to competitive prices
                 and maximizing value for travelers.
               </p>
             </div>
@@ -68,7 +68,7 @@ const CompanyInfo = () => {
             <div className="">
               <h2 className="card-title">Lowest Commission Rates</h2>
               <p className="pr-4">
-                Save on costs with TourPlaner is transparent pricing, offering
+                Save on costs with TravelCraft is transparent pricing, offering
                 some of the industry’s lowest rates without sacrificing quality
                 service.
               </p>
@@ -79,7 +79,7 @@ const CompanyInfo = () => {
             <div className="">
               <h2 className="card-title">Overall Control</h2>
               <p className="pr-4">
-                Take charge of your journey with TourPlaner is platform,
+                Take charge of your journey with TravelCraft is platform,
                 providing tools for informed decision-making and ultimate
                 control over your travel endeavors.
               </p>

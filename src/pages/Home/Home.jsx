@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <div className="container mx-auto">
       <Helmet>
-        <title>TourPlanner | Home</title>
+        <title>TravelCraft | Home</title>
       </Helmet>
       <Navbar />
       <Header cards={cardData} />
