@@ -119,7 +119,7 @@ const Profile = () => {
               <tbody>
                 {userCards.map((card, index) => (
                   <tr
-                    key={card.id}
+                    key={card._id}
                     className={index % 2 === 0 ? "bg-[#dadada]" : ""}
                   >
                     <th>{index + 1}</th>

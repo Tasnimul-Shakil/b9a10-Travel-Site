@@ -9,7 +9,7 @@ const AddNewSpot = () => {
   const userName = user?.displayName || "";
   const userEmail = user?.email || "";
   const userPhoto = user?.photoURL || "";
-  console.log(user);
+  // console.log(user);
   const handleAddWork = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -284,9 +284,7 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Cover Photo
-                  <span className="text-xs text-gray-500">
-                    (URL Only)
-                  </span>
+                  <span className="text-xs text-gray-500">(URL Only)</span>
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
@@ -305,9 +303,7 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Country Photo
-                  <span className="text-xs text-gray-500">
-                    (URL Only)
-                  </span>
+                  <span className="text-xs text-gray-500">(URL Only)</span>
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
@@ -325,9 +321,7 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Card Photo
-                  <span className="text-xs text-gray-500">
-                    (URL Only)
-                  </span>
+                  <span className="text-xs text-gray-500">(URL Only)</span>
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
@@ -346,9 +340,7 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   photo1
-                  <span className="text-xs text-gray-500">
-                    (URL Only)
-                  </span>
+                  <span className="text-xs text-gray-500">(URL Only)</span>
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
@@ -367,9 +359,7 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   photo 2
-                  <span className="text-xs text-gray-500">
-                    (URL Only)
-                  </span>
+                  <span className="text-xs text-gray-500">(URL Only)</span>
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
@@ -388,9 +378,7 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   photo 3
-                  <span className="text-xs text-gray-500">
-                    (URL Only)
-                  </span>
+                  <span className="text-xs text-gray-500">(URL Only)</span>
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
@@ -409,9 +397,7 @@ const AddNewSpot = () => {
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   photo 4
-                  <span className="text-xs text-gray-500">
-                    (URL Only)
-                  </span>
+                  <span className="text-xs text-gray-500">(URL Only)</span>
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">

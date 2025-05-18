@@ -15,7 +15,7 @@ import Kayak from "../../assets/Kayak.svg"
 
 const About = () => {
   const teamMembers = useLoaderData();
-  console.log(teamMembers, "Team members");
+  // console.log(teamMembers, "Team members");
   const stats = [
     { id: 1, name: "Trips Planned Every 24 Hours", value: "44 million" },
     { id: 2, name: "Countries Explored", value: "$119 trillion" },

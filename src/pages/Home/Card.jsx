@@ -93,9 +93,9 @@ Card.propTypes = {
     average_cost: PropTypes.number.isRequired,
     _id: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    country_name: PropTypes.number.isRequired,
-    category: PropTypes.number.isRequired,
-    seasonality: PropTypes.number.isRequired,
+    country_name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    seasonality: PropTypes.string.isRequired,
   }).isRequired,
 };
 

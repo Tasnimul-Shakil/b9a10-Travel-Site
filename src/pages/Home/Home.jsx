@@ -21,8 +21,8 @@ const Home = () => {
   // const cards = useLoaderData();
   const { cardData, blogData } = useLoaderData();
 
-  console.log(cardData);
-  console.log(blogData);
+  // console.log(cardData);
+  // console.log(blogData);
 
   const [dataLength] = useState(6);
 
@@ -49,7 +49,7 @@ const Home = () => {
         <p className="">Some of our picked properties near you location.</p>
         <div className="pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {uniqueCountries.slice(0, dataLength).map((aCards) => (
-            <Countries key={aCards.id} card={aCards} />
+            <Countries key={aCards._id} card={aCards} />
           ))}
         </div>
       </div>
@@ -59,9 +59,12 @@ const Home = () => {
           Based on your location
         </h1>
         <p className="">Some of our picked properties near you location.</p>
-        <div className=" pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+        <div className="pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {cardData.slice(0, dataLength).map((aCards) => (
-            <Card key={aCards.id} card={aCards}></Card>
+            <Card
+              key={aCards._id}
+              card={{ ...aCards, average_cost: Number(aCards.average_cost) }}
+            />
           ))}
         </div>
         <Link to={`/viewAllCards`}>
@@ -71,23 +74,20 @@ const Home = () => {
         </Link>
       </div>
       <Testimonials />
-      <div className="py-16 ">
-        <h1 className=" text-3xl pb-3 font-bold text-center ">
+      <div className="py-16">
+        <h1 className="text-3xl pb-3 font-bold text-center">
           Recent Articles & News
         </h1>
-        <p className=" text-center pb-8">
+        <p className="text-center pb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
+
         <Swiper
-          // className= 'mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 bg-white border-0  pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3'
           slidesPerView={1}
           rewind={true}
           navigation={true}
-          // modules={[Navigation]}
           spaceBetween={10}
-          pagination={{
-            clickable: true,
-          }}
+          pagination={{ clickable: true }}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -104,69 +104,11 @@ const Home = () => {
           }}
           className="mySwiper"
         >
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 1)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 2)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 3)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 4)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 5)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 6)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 7)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 8)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
-          <SwiperSlide className="px-4 max-w-2xl">
-            {blogData
-              .filter((aCards) => aCards.blog_id === 9)
-              .map((aCards) => (
-                <Blogs key={aCards.id} card={aCards}></Blogs>
-              ))}
-          </SwiperSlide>
+          {blogData.map((card) => (
+            <SwiperSlide key={card.blog_id} className="px-4 max-w-2xl">
+              <Blogs card={card} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <EmailInfo />

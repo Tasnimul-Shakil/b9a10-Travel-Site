@@ -10,7 +10,7 @@ const UpdateSpot = () => {
   const userName = user?.displayName || "";
   const userEmail = user?.email || "";
   const userPhoto = user?.photoURL || "";
-  console.log(user);
+  // console.log(user);
   const handleAddWork = (event) => {
     event.preventDefault();
     const form = event.target;

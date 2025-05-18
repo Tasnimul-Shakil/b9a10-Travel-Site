@@ -35,7 +35,7 @@ const AllBlogs = () => {
                 <div className=' pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8'>
                     {
                         cards.map(aCards => <Blogs
-                            key={aCards.id}
+                            key={aCards._id}
                             card={aCards}
                             ></Blogs>)
                     }

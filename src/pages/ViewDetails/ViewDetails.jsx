@@ -158,7 +158,10 @@ const ViewDetails = () => {
           <h1 className=" text-3xl font-bold ">See More Similar Properties</h1>
           <div className=" pt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
             {allCards.slice(0, dataLength).map((aCards) => (
-              <Card key={aCards.id} card={aCards}></Card>
+              <Card
+                key={aCards._id}
+                card={{ ...aCards, average_cost: Number(aCards.average_cost) }}
+              />
             ))}
           </div>
         </div>
